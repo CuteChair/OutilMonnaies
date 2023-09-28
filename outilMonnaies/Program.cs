@@ -9,9 +9,11 @@ Console.Write("Choisir entre CAD$ (1) ou USD$ (2) ou EUR (3) :");
 choix = Convert.ToDouble(Console.ReadLine());
 
 
-
 if (choix == 1)
 {
+
+
+
     Console.WriteLine("Vous avez choisi CAD! ");
     Console.Write("Voulez vous convertir en USD (1) ou EUR (2)? ");
     choix2 = Convert.ToDouble(Console.ReadLine());
@@ -31,30 +33,32 @@ if (choix == 1)
         eur = cad / 1.4251391;
         Console.WriteLine($"Le montant {cad} CAD equivaut a {eur} EUR !");
     }
-    /*
-    if (choix == 2)
+}
+
+if (choix == 2)
+{
+    Console.WriteLine("Vous avez choisi USD! ");
+    Console.Write("Voulez vous convertir en CAD (1) ou EUR (2)? ");
+    choix2 = Convert.ToDouble(Console.ReadLine());
+    if (choix2 == 1)
     {
-        Console.WriteLine("Vous avez choisi USD! ");
-        Console.Write("Voulez vous convertir en CAD (1) ou EUR (2)? ");
-        choix2 = Convert.ToDouble(Console.ReadLine());
-        if (choix2 == 1)
-        {
-            Console.WriteLine("Vous avez choisi CAD!");
-            Console.Write("Entrez un montant :");
-            us = Convert.ToDouble(Console.ReadLine());
-            cad = us / 0.74135635;
-            Console.WriteLine($"Le montant {us} USD equivaut a {cad} CAD$ !");
-        }
-        if (choix2 == 2)
-        {
-            Console.WriteLine("Vous avez choisi EUR!");
-            Console.Write("Entrez un montant :");
-            us = Convert.ToDouble(Console.ReadLine());
-            eur = us * 0.94672824;
-            Console.WriteLine($"Le montant {us} USD equivaut a {eur} EUR !");
-        }
-        */
-}/*
+        Console.WriteLine("Vous avez choisi CAD!");
+        Console.Write("Entrez un montant :");
+        us = Convert.ToDouble(Console.ReadLine());
+        cad = us / 0.74135635;
+        Console.WriteLine($"Le montant {us} USD equivaut a {cad} CAD$ !");
+    }
+    if (choix2 == 2)
+    {
+        Console.WriteLine("Vous avez choisi EUR!");
+        Console.Write("Entrez un montant :");
+        us = Convert.ToDouble(Console.ReadLine());
+        eur = us * 0.94672824;
+        Console.WriteLine($"Le montant {us} USD equivaut a {eur} EUR !");
+    }
+
+}
+
 if (choix == 3)
 {
     Console.WriteLine("Vous avez choisi EUR! ");
@@ -76,8 +80,20 @@ if (choix == 3)
         us = eur / 0.94672824;
         Console.WriteLine($"Le montant {eur} EUR equivaut a {us} USD$ !");
     }
-   
-}*/
+
+}
+
+if (choix > 3)
+{
+    Console.WriteLine("Veuillez selectionner un chiffre entre 1 et 3");
+    goto question;
+}
+if (choix < 1)
+{
+    Console.WriteLine("Veuillez selectionner un chiffre entre 1 et 3");
+    goto question;
+}
+
 
 Console.ReadKey();
 
