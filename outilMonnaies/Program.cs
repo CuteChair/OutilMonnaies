@@ -8,29 +8,52 @@ Console.WriteLine("Bonjour, quelle est votre monnaie de départ? ");
 Console.Write("Choisir entre CAD$ (1) ou USD$ (2) ou EUR :");
 choix = Convert.ToDouble(Console.ReadLine());
 
-   
-    /*
-    if (choix == 1)
+
+/*
+if (choix == 1)
+{
+    Console.WriteLine("Vous avez choisi CAD!");
+    Console.Write("Voulez vous convertir en USD (1) ou en EUR (2)?");
+    choix2 = Convert.ToDouble(Console.ReadLine());
+cad = Convert.ToDouble(Console.ReadLine());
+    us = cad * 0.74;
+    Console.WriteLine($"Le montant {cad} CAD$ equivaut a {us} USD$ !");
+
+} 
+
+if (choix == 2)
+{
+    Console.WriteLine("Vous avez choisi USD! ");
+    Console.Write("Pour convertir en CAD entrer le montant :");
+    us = Convert.ToDouble(Console.ReadLine());
+    cad = us / 0.74;
+    Console.WriteLine($"Le montant {us} USD$ equivaut a {cad} CAD$ !");
+}
+*/
+if (choix == 2)
+{
+    Console.WriteLine("Vous avez choisi USD! ");
+    Console.Write("Voulez vous convertir en CAD (1) ou EUR (2)?");
+    choix2 = Convert.ToDouble(Console.ReadLine());
+    if (choix2 == 1)
     {
         Console.WriteLine("Vous avez choisi CAD!");
-        Console.Write("Voulez vous convertir en USD (1) ou en EUR (2)?");
-        choix2 = Convert.ToDouble(Console.ReadLine());
-    cad = Convert.ToDouble(Console.ReadLine());
-        us = cad * 0.74;
-        Console.WriteLine($"Le montant {cad} CAD$ equivaut a {us} USD$ !");
-
-    } 
-   
-    if (choix == 2)
-    {
-        Console.WriteLine("Vous avez choisi USD! ");
-        Console.Write("Pour convertir en CAD entrer le montant :");
+        Console.Write("Entrez un montant :");
         us = Convert.ToDouble(Console.ReadLine());
-        cad = us / 0.74;
-        Console.WriteLine($"Le montant {us} USD$ equivaut a {cad} CAD$ !");
+        cad = us / 0.74135635;
+        Console.WriteLine($"Le montant {us} USD equivaut a {cad} CAD$ !");
     }
-    */
-    if(choix == 3)
+    if (choix2 == 2)
+    {
+        Console.WriteLine("Vous avez choisi EUR!");
+        Console.Write("Entrez un montant :");
+        us = Convert.ToDouble(Console.ReadLine());
+        eur = us * 0.94672824;
+        Console.WriteLine($"Le montant {us} USD equivaut a {eur} EUR !");
+    }
+
+}/*
+if (choix == 3)
 {
     Console.WriteLine("Vous avez choisi EUR! ");
     Console.Write("Voulez vous convertir en CAD (1) ou USD (2)?");
@@ -40,7 +63,7 @@ choix = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine("Vous avez choisi CAD!");
         Console.Write("Entrez un montant :");
         eur = Convert.ToDouble(Console.ReadLine());
-        cad = eur / 1.42;
+        cad = eur / 1.4251391;
         Console.WriteLine($"Le montant {eur} EUR equivaut a {cad} CAD$ !");
     }
     if (choix2 == 2)
@@ -48,11 +71,11 @@ choix = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine("Vous avez choisi USD!");
         Console.Write("Entrez un montant :");
         eur = Convert.ToDouble(Console.ReadLine());
-        us = eur / 0.95;
+        us = eur / 0.94672824;
         Console.WriteLine($"Le montant {eur} EUR equivaut a {us} USD$ !");
     }
    
-}
+}*/
 
 Console.ReadKey();
 
